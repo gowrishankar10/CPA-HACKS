@@ -1,0 +1,55 @@
+<div class="grid-containerss">
+  <div class="item1">
+    <input
+      class="lbs1"
+      id="contentTitleName"
+      name="contentTitleName"
+      [(ngModel)]="contentTitleName"
+      placeholder=" Content Title"
+      required
+    />
+  </div>
+  <div
+    class="item2"
+  >
+    <input
+      class="lbs1"
+      id="fileType"
+      name="fileType"
+      [(ngModel)]="fileType"
+      placeholder=" file Type"
+      required
+    />
+  </div>
+  <div class="item3">
+    <input
+      class="lbs1"
+      id="description"
+      name="description"
+      [(ngModel)]="description"
+      placeholder="description"
+      required
+    />
+  </div>
+  <div class="item4">  <input
+    class="lbs1"
+    id="videoLink"
+    name="videoLink"
+    [(ngModel)]="videoLink"
+    placeholder="videoLink"
+    required
+  /> </div>
+  <div class="item5"><input
+    class="lbs1"
+    #imageInput
+    type="file"
+    accept="videocontent/*"
+    (change)="processFile(imageInput)"
+  /></div>
+  <div
+    class="item6"
+  ></div>
+  <div class="item7">
+  
+  <div class="item8"></div>
+ 

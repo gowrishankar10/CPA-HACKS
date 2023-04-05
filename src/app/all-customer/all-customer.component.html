@@ -1,0 +1,51 @@
+<div>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <header class="header"><h1 style="padding-top: 15px">CP Hacks</h1></header>
+  
+    <div style="padding-top: 2%; padding-bottom: 2%">
+      <button
+        (click)="AddCourseRoute()"
+        mat-button
+        style="background-color: #1affff; color: black"
+        color="primary"
+      >
+        Add Course
+      </button>
+    </div>
+  
+    <div class="container">
+      <table style="padding-top: 20%">
+        <tr>
+          <th>userName</th>
+          <th>Email</th>
+          <th>Mobile Number</th>
+          <th>Created Date & Time</th>
+          <th>Modified By</th>
+          <th>Modified Date Time</th>
+
+          <th>User Status</th>
+
+          <th>Edit</th>
+        </tr>
+        <tr *ngFor="let Course of getAllCourse">
+          <td (click)="titleName(Course.courseId)">{{ Course.userName }}</td>
+          <td>{{ Course.email }}</td>
+          <td>{{ Course.mobileNumber }}</td>
+
+          <td>{{ Course.createdDateTime }}</td>
+          <td>{{ Course.modifiedBy }}</td>
+          <td>{{ Course.modifiedDateTime }}</td>
+
+          <td>{{ Course.userId ==1?  'Admin' : 'Customer' }}</td>
+
+          <td> <button (click)="editcourse(Course.courseId)" mat-mini-fab color="primary">Edit</button>
+          
+  
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  

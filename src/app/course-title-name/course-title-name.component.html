@@ -1,0 +1,35 @@
+<div>
+  <header class="header">
+    <h1 style="padding-top: 15px">Course Introduction</h1>
+  </header>
+
+  <div style="padding-top: 2%; padding-bottom: 2%">
+    <button (click)="AddCourseRoute
+      ()" mat-button style="background-color: #1affff; color: black" color="primary">
+      Add Course Tiltle
+    </button>
+  </div>
+
+  <div class="container">
+    <table style="padding-top: 20%">
+      <tr>
+        <th>Title Name</th>
+        <th>Created By</th>
+        <th>Created Date & Time</th>
+        <th>Modified By</th>
+        <th>Modified Date & Time</th>
+        <th>Edit</th>
+      </tr>
+      <tr *ngFor="let Course of getAllCourse">
+        <td (click)="videocontent()">{{ Course.titleName }}</td>
+        <td>{{ Course.createdBy }}</td>
+        <td>{{ Course.createdDateTime }}</td>
+        <td>{{ Course.modifiedBy }}</td>
+        <td>{{ Course.modifiedDateTime }}</td>
+        <td><i class='fas fa-pen-fancy' style='font-size:24px'><button
+              (click)="editCategory(Course.categoryId)">Edit</button></i>
+
+      </tr>
+    </table>
+  </div>
+</div>

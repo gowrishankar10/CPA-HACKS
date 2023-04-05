@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+<div class="w3-container">
+
+  <div class="w3-card-4" style="width: 100%">
+    <header style="background-color: #1affff;
+    " class="w3-container " style="background-color: #1affff;">
+      <h1 style="padding-left: 40%;">CPS Hacks</h1>
+    </header>
+
+    <div style="padding-top: 5%;" class="w3-container">
+      <div style="padding-left: 40%">
+        <input
+          value="statename"
+          [(ngModel)]="courseName"
+          type="text"
+          placeholder="Course Name"
+        />
+
+        <br />
+        <br />
+
+        <input
+          value="statename"
+          [(ngModel)]="createdBy"
+          type="text"
+          placeholder="created By"
+        />
+
+        <br />
+        <br />
+
+        <section>
+          <button
+
+          style="background-color: #1affff; color: black;"
+            id="bt1"
+            mat-raised-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+            Submit
+          </button>
+        </section>
+      </div>
+    </div>
+    <!--   
+      <footer class="w3-container w3-blue">
+        <h5>Footer</h5>
+      </footer> -->
+  </div>
+</div>
